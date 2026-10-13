@@ -1,0 +1,42 @@
+workflows:
+  ios-unsigned:
+    name: Build Unsigned IPA
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    environment:
+      xcode: 16.2
+    scripts:
+      - name: Download Frida gadget
+        script: |
+          set -e
+          FRIDA_VER=17.23.3
+          URL="https://github.com/frida/frida/releases/download/${FRIDA_VER}/frida-gadget-${FRIDA_VER}-ios-universal.dylib.gz"
+          curl -fL "$URL" -o /tmp/g.dylib.gz
+          gunzip -f /tmp/g.dylib.gz
+          cp /tmp/g.dylib Resources/FridaGadget.dylib
+          ls -la Resources/
+      - name: Build unsigned app
+        script: |
+          xcodebuild -project SliceApp.xcodeproj \
+            -scheme SliceApp \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath build \
+            CODE_SIGN_IDENTITY="" \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            clean build
+      - name: Verify gadget embedded
+        script: |
+          APP=$(find build -name "SliceApp.app" -type d | head -1)
+          echo "App: $APP"
+          ls -la "$APP/Frameworks" || echo "!!! NO FRAMEWORKS DIR !!!"
+          ls -la "$APP/Frameworks/FridaGadget.dylib" || echo "!!! GADGET MISSING !!!"
+      - name: Package unsigned IPA
+        script: |
+          APP=$(find build -name "SliceApp.app" -type d | head -1)
+          mkdir -p Payload
+          cp -R "$APP" Payload/
+          zip -r SliceApp-unsigned.ipa Payload
+    artifacts:
+      - SliceApp-unsigned.ipa

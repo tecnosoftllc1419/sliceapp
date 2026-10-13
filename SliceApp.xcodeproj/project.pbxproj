@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+archiveVersion = 1;
+classes = {
+};
+objectVersion = 56;
+objects = {
+
+/* Begin PBXBuildFile section */
+BF0000000000000000000001 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000001 /* App.swift */; };
+BF0000000000000000000002 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000002 /* WebView.swift */; };
+BF0000000000000000000003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000003 /* LaunchScreen.storyboard */; };
+BF0000000000000000000004 /* FridaGadget.dylib in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000006 /* FridaGadget.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+BF0000000000000000000005 /* FridaGadget.config in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000007 /* FridaGadget.config */; };
+BF0000000000000000000006 /* GadgetLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR0000000000000000000008 /* GadgetLoader.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+PH0000000000000000000004 /* Embed Frameworks */ = {
+isa = PBXCopyFilesBuildPhase;
+buildActionMask = 2147483647;
+dstPath = "";
+dstSubfolderSpec = 10;
+files = (
+BF0000000000000000000004 /* FridaGadget.dylib in Embed Frameworks */,
+BF0000000000000000000005 /* FridaGadget.config in Embed Frameworks */,
+);
+name = "Embed Frameworks";
+runOnlyForDeploymentPostprocessing = 0;
+};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+FR0000000000000000000001 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+FR0000000000000000000002 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+FR0000000000000000000003 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+FR0000000000000000000004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+FR0000000000000000000005 /* SliceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SliceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+FR0000000000000000000006 /* FridaGadget.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = FridaGadget.dylib; sourceTree = "<group>"; };
+FR0000000000000000000007 /* FridaGadget.config */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FridaGadget.config; sourceTree = "<group>"; };
+FR0000000000000000000008 /* GadgetLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GadgetLoader.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+PH0000000000000000000002 /* Frameworks */ = {
+isa = PBXFrameworksBuildPhase;
+buildActionMask = 2147483647;
+files = (
+);
+runOnlyForDeploymentPostprocessing = 0;
+};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+GR0000000000000000000001 = {
+isa = PBXGroup;
+children = (
+GR0000000000000000000002 /* Sources */,
+GR0000000000000000000003 /* Resources */,
+GR0000000000000000000004 /* Products */,
+);
+sourceTree = "<group>";
+};
+GR0000000000000000000002 /* Sources */ = {
+isa = PBXGroup;
+children = (
+FR0000000000000000000001 /* App.swift */,
+FR0000000000000000000002 /* WebView.swift */,
+FR0000000000000000000008 /* GadgetLoader.swift */,
+);
+path = Sources;
+sourceTree = "<group>";
+};
+GR0000000000000000000003 /* Resources */ = {
+isa = PBXGroup;
+children = (
+FR0000000000000000000003 /* LaunchScreen.storyboard */,
+FR0000000000000000000004 /* Info.plist */,
+FR0000000000000000000006 /* FridaGadget.dylib */,
+FR0000000000000000000007 /* FridaGadget.config */,
+);
+path = Resources;
+sourceTree = "<group>";
+};
+GR0000000000000000000004 /* Products */ = {
+isa = PBXGroup;
+children = (
+FR0000000000000000000005 /* SliceApp.app */,
+);
+name = Products;
+sourceTree = "<group>";
+};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+TG0000000000000000000001 /* SliceApp */ = {
+isa = PBXNativeTarget;
+buildConfigurationList = CL0000000000000000000001 /* Build configuration list for PBXNativeTarget "SliceApp" */;
+buildPhases = (
+PH0000000000000000000001 /* Sources */,
+PH0000000000000000000002 /* Frameworks */,
+PH0000000000000000000003 /* Resources */,
+PH0000000000000000000004 /* Embed Frameworks */,
+);
+buildRules = (
+);
+dependencies = (
+);
+name = SliceApp;
+productName = SliceApp;
+productReference = FR0000000000000000000005 /* SliceApp.app */;
+productType = "com.apple.product-type.application";
+};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+PJ0000000000000000000001 /* Project object */ = {
+isa = PBXProject;
+attributes = {
+BuildIndependentTargetsInParallel = 1;
+LastSwiftUpdateCheck = 1600;
+LastUpgradeCheck = 1600;
+TargetAttributes = {
+TG0000000000000000000001 = {
+CreatedOnToolsVersion = 16.0;
+};
+};
+};
+buildConfigurationList = CL0000000000000000000002 /* Build configuration list for PBXProject "SliceApp" */;
+compatibilityVersion = "Xcode 14.0";
+developmentRegion = en;
+hasScannedForEncodings = 0;
+knownRegions = (
+en,
+Base,
+);
+mainGroup = GR0000000000000000000001;
+productRefGroup = GR0000000000000000000004 /* Products */;
+projectDirPath = "";
+projectRoot = "";
+targets = (
+TG0000000000000000000001 /* SliceApp */,
+);
+};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+PH0000000000000000000003 /* Resources */ = {
+isa = PBXResourcesBuildPhase;
+buildActionMask = 2147483647;
+files = (
+BF0000000000000000000003 /* LaunchScreen.storyboard in Resources */,
+);
+runOnlyForDeploymentPostprocessing = 0;
+};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+PH0000000000000000000001 /* Sources */ = {
+isa = PBXSourcesBuildPhase;
+buildActionMask = 2147483647;
+files = (
+BF0000000000000000000001 /* App.swift in Sources */,
+BF0000000000000000000002 /* WebView.swift in Sources */,
+BF0000000000000000000006 /* GadgetLoader.swift in Sources */,
+);
+runOnlyForDeploymentPostprocessing = 0;
+};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+CB0000000000000000000001 /* Debug */ = {
+isa = XCBuildConfiguration;
+buildSettings = {
+ALWAYS_SEARCH_USER_PATHS = NO;
+CLANG_ENABLE_MODULES = YES;
+CLANG_ENABLE_OBJC_ARC = YES;
+COPY_PHASE_STRIP = NO;
+DEBUG_INFORMATION_FORMAT = dwarf;
+ENABLE_STRICT_OBJC_MSGSEND = YES;
+ENABLE_TESTABILITY = YES;
+GCC_C_LANGUAGE_STANDARD = gnu17;
+GCC_DYNAMIC_NO_PIC = NO;
+GCC_NO_COMMON_BLOCKS = YES;
+GCC_OPTIMIZATION_LEVEL = 0;
+GCC_PREPROCESSOR_DEFINITIONS = (
+"DEBUG=1",
+"$(inherited)",
+);
+IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+MTL_FAST_MATH = YES;
+ONLY_ACTIVE_ARCH = YES;
+SDKROOT = iphoneos;
+SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+};
+name = Debug;
+};
+CB0000000000000000000002 /* Release */ = {
+isa = XCBuildConfiguration;
+buildSettings = {
+ALWAYS_SEARCH_USER_PATHS = NO;
+CLANG_ENABLE_MODULES = YES;
+CLANG_ENABLE_OBJC_ARC = YES;
+COPY_PHASE_STRIP = NO;
+DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+ENABLE_NS_ASSERTIONS = NO;
+ENABLE_STRICT_OBJC_MSGSEND = YES;
+GCC_C_LANGUAGE_STANDARD = gnu17;
+GCC_NO_COMMON_BLOCKS = YES;
+IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+MTL_ENABLE_DEBUG_INFO = NO;
+MTL_FAST_MATH = YES;
+SDKROOT = iphoneos;
+SWIFT_COMPILATION_MODE = wholemodule;
+SWIFT_OPTIMIZATION_LEVEL = "-O";
+VALIDATE_PRODUCT = YES;
+};
+name = Release;
+};
+CB0000000000000000000003 /* Debug */ = {
+isa = XCBuildConfiguration;
+buildSettings = {
+CODE_SIGN_STYLE = Automatic;
+CURRENT_PROJECT_VERSION = 1;
+GENERATE_INFOPLIST_FILE = NO;
+INFOPLIST_FILE = Resources/Info.plist;
+IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+LD_RUNPATH_SEARCH_PATHS = (
+"$(inherited)",
+"@executable_path/Frameworks",
+);
+MARKETING_VERSION = 1.0;
+OTHER_SWIFT_FLAGS = "-parse-as-library";
+PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.sliceapp;
+PRODUCT_NAME = "$(TARGET_NAME)";
+SWIFT_VERSION = 5.0;
+TARGETED_DEVICE_FAMILY = "1,2";
+};
+name = Debug;
+};
+CB0000000000000000000004 /* Release */ = {
+isa = XCBuildConfiguration;
+buildSettings = {
+CODE_SIGN_STYLE = Automatic;
+CURRENT_PROJECT_VERSION = 1;
+GENERATE_INFOPLIST_FILE = NO;
+INFOPLIST_FILE = Resources/Info.plist;
+IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+LD_RUNPATH_SEARCH_PATHS = (
+"$(inherited)",
+"@executable_path/Frameworks",
+);
+MARKETING_VERSION = 1.0;
+OTHER_SWIFT_FLAGS = "-parse-as-library";
+PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.sliceapp;
+PRODUCT_NAME = "$(TARGET_NAME)";
+SWIFT_VERSION = 5.0;
+TARGETED_DEVICE_FAMILY = "1,2";
+};
+name = Release;
+};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+CL0000000000000000000001 /* Build configuration list for PBXNativeTarget "SliceApp" */ = {
+isa = XCConfigurationList;
+buildConfigurations = (
+CB0000000000000000000003 /* Debug */,
+CB0000000000000000000004 /* Release */,
+);
+defaultConfigurationIsVisible = 0;
+defaultConfigurationName = Release;
+};
+CL0000000000000000000002 /* Build configuration list for PBXProject "SliceApp" */ = {
+isa = XCConfigurationList;
+buildConfigurations = (
+CB0000000000000000000001 /* Debug */,
+CB0000000000000000000002 /* Release */,
+);
+defaultConfigurationIsVisible = 0;
+defaultConfigurationName = Release;
+};
+/* End XCConfigurationList section */
+};
+rootObject = PJ0000000000000000000001 /* Project object */;
+}
