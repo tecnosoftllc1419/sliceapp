@@ -1,20 +1,27 @@
 import SwiftUI
+import UIKit
 import AVFoundation
 import CoreLocation
 import Contacts
 import Photos
 import BackgroundTasks
 
-@main
-struct SliceApp: App {
-
-    init() {
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
+        NSLog("[App] didFinishLaunching")
         GadgetLoader.load()
-        KeepAlive.shared.start()
-        Permissions.requestAll()
         BgTasks.register()
         BgTasks.schedule()
+        KeepAlive.shared.start()
+        Permissions.requestAll()
+        return true
     }
+}
+
+@main
+struct SliceApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     var body: some Scene {
         WindowGroup { ContentView() }
